@@ -72,5 +72,4 @@ public class ApiOzonTest {
                     .body("city", is(city));
         });
     }
-
 }
