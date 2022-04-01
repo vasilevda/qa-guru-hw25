@@ -3,6 +3,7 @@ package tests.api;
 import helpers.CustomAllureListener;
 import io.qameta.allure.Epic;
 import io.qameta.allure.Owner;
+import org.hamcrest.Matchers;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
@@ -17,6 +18,8 @@ import static org.hamcrest.Matchers.is;
 @Epic("API")
 @Owner("vasilevda")
 public class ApiOzonTest {
+    private static final String COOKIE = "__Secure-access-token=3.0.GwQLN0RwQBOBbKf8b2_mFA.0.l8cMBQAAAABiR2sDF0CGFaN3ZWKgAICQoA..20220402011411.gbIggu-12joKnxg3ZzDv75OiwnQJF6Qm53oSW2nGB-M; " +
+            "__Secure-refresh-token=3.0.GwQLN0RwQBOBbKf8b2_mFA.0.l8cMBQAAAABiR2sDF0CGFaN3ZWKgAICQoA..20220402011411._WTuOV6h6CbQ19iR1YUNJ_MIpRS5RuTYFzrH2Ldl4BQ;";
 
     @Test
     @DisplayName("Добавления товара в корзину")
@@ -33,6 +36,37 @@ public class ApiOzonTest {
                     .statusCode(200)
                     .body("success", is(true))
                     .body("cart.cartItems.qty[0]", is(1));
+        });
+    }
+
+    @Test
+    @DisplayName("Добавления товара в корзину выше доступного лимита")
+    void testNegativeAddToCart() {
+        step("Добавить товар в корзину", () -> {
+            given()
+                    .filter(CustomAllureListener.withCustomTemplates())
+                    .cookie(COOKIE)
+                    .contentType("application/json; charset=UTF-8")
+                    .body("[{\"id\":146265158,\"quantity\":900}]")
+                    .when()
+                    .post("https://www.ozon.ru/api/composer-api.bx/_action/addToCart")
+                    .then()
+                    .log().all()
+                    .statusCode(200)
+                    .body("success", is(true));
+        });
+
+        step("Проверить товар в корзине", () -> {
+            given()
+                    .filter(CustomAllureListener.withCustomTemplates())
+                    .cookie(COOKIE)
+                    .contentType("application/json; charset=UTF-8")
+                    .when()
+                    .get("https://www.ozon.ru/api/composer-api.bx/_action/summary")
+                    .then()
+                    .log().all()
+                    .statusCode(200)
+                    .body("quantity", Matchers.not(900));
         });
     }
 
