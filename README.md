@@ -7,8 +7,8 @@
 + [Технологии и инструменты](#Technology)
 + [Запуск тестов в Jenkins](#Jenkins)
     + [Параметры для сборки](#ParametersRun)
-    + [Оформление документа Configure.properties](#Properties)
-    + Item B 3
+        + [Оформление документа Configure.properties](#Properties)
+        + [Варинты документа Configure.properties для запуска тестов](#TypeDocumentProperties)
 + [Отчет о результатах тестирования в Allure Report](#AllureReport)
 + [Интеграция с Allure TestOps](#AllureTestOps)
 + [Интеграция с Jira](#Jira)
@@ -73,7 +73,62 @@
 >- *device.user* - логин для авторизации
 >- *device.key* - ключ\пароль для авторизации
 
+### <a name="TypeDocumentProperties">Варинты документа Configure.properties для запуска тестов</a>
+<details>
+    <summary><h4>Configure.properties для UI</h4></summary>
+    
+        https.url=http://selenoid:4444/wd/hub
+        https.curl=https://${server.host.login}:${server.host.password}@selenoid.autotests.cloud/wd/hub
+        device.name=UI
+        https.browser=
+        device.user=user1
+        device.key=user1
+   
+</details>
+<details>
+    <summary><h4>Configure.properties для Android</h4></summary>
+    
+*   <details>
+        <summary><h4>Browserstack</h4></summary>
 
+            https.url=http://hub.browserstack.com/wd/hub
+            https.curl=https://${device.user}:${device.key}@api-cloud.browserstack.com/app-automate/upload
+            device.name=browserstack
+            https.browser=
+            device.user=bsuser_CVEMKg
+            device.key=bqsfjY6VFvsxvhETqybW
+    </details>
+*   <details>
+        <summary><h4>Selenide</h4></summary>
+
+            https.url=http://hub.browserstack.com/wd/hub
+            https.curl=https://${device.user}:${device.key}@api-cloud.browserstack.com/app-automate/upload
+            device.name=browserstack
+            https.browser=
+            device.user=bsuser_CVEMKg
+            device.key=bqsfjY6VFvsxvhETqybW
+    </details>
+*   <details>
+        <summary><h4>Emulator</h4></summary>
+
+            https.url=http://localhost:4723/wd/hub
+            https.curl=
+            device.name=Emulation
+            https.browser=
+            device.user=
+            device.key=
+    </details>
+*   <details>
+        <summary><h4>Real</h4></summary>
+
+            https.url=http://localhost:4723/wd/hub
+            https.curl=
+            device.name=Real
+            https.browser=
+            device.user=
+            device.key=
+    </details>
+</details>
 
 # <a name="AllureReport">Отчет о результатах тестирования в [Allure Report](https://jenkins.autotests.cloud/job)</a>
 
