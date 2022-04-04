@@ -9,9 +9,10 @@
 # Оглавление
 [Технологии и инструменты](#Технологии_и_инструменты)
 
+[TOC]
 
 
-## :rocket: Технологии и инструменты
+# :rocket: Технологии и инструменты
 <a name="Технологии_и_инструменты"></a>
 
 <p  align="center">
@@ -43,7 +44,7 @@
 
 
 
-## <img width="4%" title="Jenkins" src="images/jenkins-logo.svg"> Запуск тестов в [Jenkins](https://jenkins.autotests.cloud/job/C07-daramirra-diploma/)
+# <img width="4%" title="Jenkins" src="images/jenkins-logo.svg"> Запуск тестов в [Jenkins](https://jenkins.autotests.cloud/job/C07-daramirra-diploma/)
 
 ### :pushpin: Параметры сборки
 
