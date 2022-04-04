@@ -3,10 +3,12 @@
 
 
 ## Оглавление
-[Введение](#Description)  
-[Технологии и инструменты](#Technology)  
-
-
++ [Введение](#Description)
++ [Технологии и инструменты](#Technology)
++ [Запуск тестов в Jenkins](#Jenkins)
+    + [Параметры для сборки](#ParametersRun)
+    + [Оформление документа Configure.properties](#Properties)
+    + Item B 3
 
 ## <a name="Description">Введение</a>
 - Все представленные тесты были выполнены в рамках подвидения итогов прохождения курсов на портале QA GURU;
@@ -31,10 +33,28 @@
   <code><img width="5%" title="Telegram" src="images/Telegram.svg"></code>
 </p>
 
-
 В данном проекте автотесты написаны на **Java** с использованием фреймворка **Selenide**.
 Для сборки проекта используется **Gradle**.  
 **JUnit 5** используется как фреймворк для модульного тестирования.
 Запуск тестов выполняется из **Jenkins**.
 **Selenoid** используется для запуска браузеров в контейнерах **Docker**.
 **Allure Report, Telegram Bot** используются для визуализации результатов тестирования.
+
+
+
+# <a name="Jenkins">Запуск тестов в [Jenkins](https://jenkins.autotests.cloud/job/)</a>
+
+Для запуска тестов, нобходимо заполнить документ **Configure.properties** определенными данными, от которых будет зависеть выполнение разных модулей проекта.
+
+## <a name="ParametersRun">Параметры для сборки</a>
+
+### <a name="Properties">Оформление документа Configure.properties</a>
+```XML
+https.url=
+https.curl=
+device.name=
+https.browser=
+device.user=
+device.key=
+
+```
