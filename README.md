@@ -9,7 +9,12 @@
     + [Параметры для сборки](#ParametersRun)
     + [Оформление документа Configure.properties](#Properties)
     + Item B 3
-+ [Отчет о результатах тестирования в AllureReport](#AllureReport)
++ [Отчет о результатах тестирования в Allure Report](#AllureReport)
++ [Интеграция с Allure TestOps](#AllureTestOps)
++ [Интеграция с Jira](#Jira)
++ [Результаты выполнения тестов](#Results)
+
+
 
 ## <a name="Description">Введение</a>
 - Все представленные тесты были выполнены в рамках подвидения итогов прохождения курсов на портале QA GURU;
@@ -82,6 +87,18 @@
   <img src="images/Allure Report steps.png" alt="Allure Report" width="650">
 </p>
 
+
+
+# <a name="AllureTestOps">Интеграция с [Allure TestOps](https://allure.autotests.cloud/)</a>
+
+
+
+# <a name="Jira">Интеграция с [Jira](https://jira.autotests.cloud/)</a>
+
+
+
+# <a name="Results">Результаты выполнения тестов</a>
+
 ### Пример запуска теста в Selenoid
 <p align="center">
   <img src="images/video.gif" alt="video" width="650">
@@ -91,4 +108,3 @@
 <p align="center">
   <a href="http://www.pidor.com/"><img src="images/tlgrm.png" alt="Telegram" width="650"></a>
 </p>
-
