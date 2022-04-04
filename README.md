@@ -6,7 +6,8 @@
 + [Введение](#Description)
 + [Технологии и инструменты](#Technology)
 + [Запуск тестов в Jenkins](#Jenkins)
-    + [Параметры для сборки](#ParametersRun)
+    + [Параметры сборки System.property](#SystemProperty)
+    + [Параметры сборки properties документа](#ParamProperties)
         + [Оформление документа Configure.properties](#Properties)
         + [Варинты документа Configure.properties для запуска тестов](#TypeDocumentProperties)
 + [Отчет о результатах тестирования в Allure Report](#AllureReport)
@@ -50,9 +51,21 @@
 
 # <a name="Jenkins">Запуск тестов в [Jenkins](https://jenkins.autotests.cloud/job/)</a>
 
-Для запуска тестов, нобходимо заполнить документ **Configure.properties** определенными данными, от которых будет зависеть выполнение разных модулей проекта.
+## <a name="SystemProperty">Параметры сборки System.property</a>
+```bash
+gradle clean test 
+-Dtag=${tag}
+```
 
-## <a name="ParametersRun">Параметры для сборки</a>
+```mermaid
+graph LR
+A[TAG] --> B[UI]
+A --> D[Mobile]
+A --> E[API]
+```
+
+## <a name="ParamProperties">Параметры сборки properties документа</a>
+Для запуска тестов, нобходимо заполнить документ **Configure.properties** определенными данными, от которых будет зависеть выполнение разных модулей проекта.
 
 ### <a name="Properties">Оформление документа Configure.properties</a>
 
@@ -77,8 +90,8 @@
 
 ```mermaid
 graph LR
-A[.properties] --> B[UI]
-A[.properties] --> C[Mobile]
+A[Properties] --> B[UI]
+A[Properties] --> C[Mobile]
 C --> D[Browserstack]
 C --> E[Selenide]
 C --> F[Emulator]
