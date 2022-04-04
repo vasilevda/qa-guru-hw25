@@ -9,6 +9,7 @@
     + [Параметры для сборки](#ParametersRun)
     + [Оформление документа Configure.properties](#Properties)
     + Item B 3
++ [Отчет о результатах тестирования в AllureReport](#AllureReport)
 
 ## <a name="Description">Введение</a>
 - Все представленные тесты были выполнены в рамках подвидения итогов прохождения курсов на портале QA GURU;
@@ -57,3 +58,38 @@
   device.user=
   device.key=
 ```
+
+
+
+# <a name="AllureReport">Отчет о результатах тестирования в [Allure Report](https://jenkins.autotests.cloud/job)</a>
+## Общая информация
+
+*Главная страница Allure-отчета содержит следующие информационные блоки:*
+
+>- [x] <code><strong>*ALLURE REPORT*</strong></code> - отображает дату и время прохождения теста, общее количество прогнанных кейсов, а также диаграмму с указанием процента и количества успешных, упавших и сломавшихся в процессе выполнения тестов
+>- [x] <code><strong>*TREND*</strong></code> - отображает тренд прохождения тестов от сборки к сборке
+>- [x] <code><strong>*SUITES*</strong></code> - отображает распределение результатов тестов по тестовым наборам
+>- [x] <code><strong>*CATEGORIES*</strong></code> - отображает распределение неуспешно прошедших тестов по видам дефектов
+<p align="center">
+  <img src="images/Allure Report.png" alt="Allure Report" width="900">
+</p>
+
+### Список тестов c описанием шагов и визуализацией результатов
+
+*На данной странице представляется стандартное распределение выполнявшихся тестов по тестовым наборам или классам, в
+которых находятся тестовые методы.*
+
+<p align="center">
+  <img src="images/Allure Report steps.png" alt="Allure Report" width="900">
+</p>
+
+## Пример запуска теста в Selenoid
+<p align="center">
+  <img src="images/video.gif" alt="video" width="1000">
+</p>
+
+## Уведомления в Telegram
+<p align="center">
+  <a href="http://www.pidor.com/"><img src="images/tlgrm.png" alt="Telegram" width="440"></a>
+</p>
+
