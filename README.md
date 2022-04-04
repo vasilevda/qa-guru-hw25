@@ -74,6 +74,17 @@
 >- *device.key* - ключ\пароль для авторизации
 
 ### <a name="TypeDocumentProperties">Варинты документа Configure.properties для запуска тестов</a>
+
+```mermaid
+graph LR
+A[.properties] --> B[UI]
+A[.properties] --> C[Mobile]
+C --> D[Browserstack]
+C --> E[Selenide]
+C --> F[Emulator]
+C --> G[Real]
+```
+
 <details>
     <summary><h4>Configure.properties для UI</h4></summary>
     
