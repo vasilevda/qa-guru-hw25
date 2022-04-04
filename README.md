@@ -49,7 +49,7 @@
 
 
 
-# <a name="Jenkins">Запуск тестов в [Jenkins](https://jenkins.autotests.cloud/job/)</a>
+# <a name="Jenkins">Запуск тестов в [Jenkins](https://jenkins.autotests.cloud/job/10_da-vasilev_qa-guru-hw25/)</a>
 
 ## <a name="SystemProperty">Параметры сборки System.property</a>
 ```bash
