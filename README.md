@@ -3,16 +3,18 @@
 
 
 ## Оглавление
-[TOC]
+[Введение](#Description)  
+[Технологии и инструменты](#Technology)  
 
 
-## Введение
+
+## <a name="Description">Введение</a>
 - Все представленные тесты были выполнены в рамках подвидения итогов прохождения курсов на портале QA GURU;
 - В некоторых тестах **СПЕЦИАЛЬНО** :D были допущены ошибки;
 
 
 
-# Технологии и инструменты
+# <a name="Technology">Технологии и инструменты</a>
 <p  align="center">
   <code><img width="5%" title="IntelliJ IDEA" src="images/IDEA-logo.svg"></code>
   <code><img width="5%" title="Java" src="images/java-logo.svg"></code>
@@ -30,13 +32,9 @@
 </p>
 
 
->*В данном проекте автотесты написаны на <code><strong>*Java*</strong></code> с использованием фреймворка <code><strong>*Selenide*</strong></code>.*
->*Для сборки проекта используется <code><strong>*Gradle*</strong></code>.*
->
->*<code><strong>*JUnit 5*</strong></code> используется как фреймворк для модульного тестирования.*
->
->*Запуск тестов выполняется из <code><strong>*Jenkins*</strong></code>.*
->
->*<code><strong>*Selenoid*</strong></code> используется для запуска браузеров в контейнерах  <code><strong>*Docker*</strong></code>.*
->
->*<code><strong>*Allure Report, Telegram Bot*</strong></code> используются для визуализации результатов тестирования.*
+В данном проекте автотесты написаны на **Java** с использованием фреймворка **Selenide**.
+Для сборки проекта используется **Gradle**.  
+**JUnit 5** используется как фреймворк для модульного тестирования.
+Запуск тестов выполняется из **Jenkins**.
+**Selenoid** используется для запуска браузеров в контейнерах **Docker**.
+**Allure Report, Telegram Bot** используются для визуализации результатов тестирования.
