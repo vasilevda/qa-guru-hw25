@@ -1,14 +1,12 @@
 package drivers;
 
 import com.codeborne.selenide.WebDriverProvider;
-import config.MobileConfig;
-import io.appium.java_client.android.AndroidDriver;
+import config.Configure;
 import org.aeonbits.owner.ConfigFactory;
 import org.junit.jupiter.api.Assertions;
 import org.openqa.selenium.Capabilities;
 import org.openqa.selenium.MutableCapabilities;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
 import javax.annotation.Nonnull;
@@ -21,7 +19,7 @@ import static org.hamcrest.Matchers.is;
 import static org.hamcrest.Matchers.notNullValue;
 
 public class BrowserstackMobileDriver implements WebDriverProvider {
-    static final MobileConfig CFG = ConfigFactory.create(MobileConfig.class);
+    static final Configure CFG = ConfigFactory.create(Configure.class);
     private static final String APP_URL = uploadAPK();
 
     public static URL getBrowserstackUrl() {

@@ -1,7 +1,7 @@
 package drivers;
 
 import com.codeborne.selenide.WebDriverProvider;
-import config.MobileConfig;
+import config.Configure;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.options.UiAutomator2Options;
 import io.appium.java_client.remote.AutomationName;
@@ -16,7 +16,7 @@ import java.net.MalformedURLException;
 import java.net.URL;
 
 public class SelenoidMobileDriver implements WebDriverProvider {
-    static final MobileConfig CFG = ConfigFactory.create(MobileConfig.class);
+    static final Configure CFG = ConfigFactory.create(Configure.class);
 
     SelenoidMobileDriver () {
         Assertions.assertNotNull(CFG.curl(), "Сurl not fount");

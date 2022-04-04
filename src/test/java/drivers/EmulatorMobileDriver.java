@@ -1,7 +1,7 @@
 package drivers;
 
 import com.codeborne.selenide.WebDriverProvider;
-import config.MobileConfig;
+import config.Configure;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.options.UiAutomator2Options;
 import io.appium.java_client.remote.AutomationName;
@@ -14,17 +14,14 @@ import javax.annotation.CheckReturnValue;
 import javax.annotation.Nonnull;
 import javax.annotation.ParametersAreNonnullByDefault;
 import java.io.File;
-import java.io.IOException;
-import java.io.InputStream;
 import java.net.MalformedURLException;
 import java.net.URL;
 
-import static org.apache.commons.io.FileUtils.copyInputStreamToFile;
 import static org.openqa.selenium.remote.CapabilityType.APPLICATION_NAME;
 
 @ParametersAreNonnullByDefault
 public class EmulatorMobileDriver implements WebDriverProvider {
-    static final MobileConfig CFG = ConfigFactory.create(MobileConfig.class);
+    static final Configure CFG = ConfigFactory.create(Configure.class);
 
     EmulatorMobileDriver() {
         Assertions.assertNotNull(CFG.url(), "Hub not fount");

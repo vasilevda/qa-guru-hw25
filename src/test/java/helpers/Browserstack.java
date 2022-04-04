@@ -1,12 +1,12 @@
 package helpers;
 
-import config.MobileConfig;
+import config.Configure;
 import org.aeonbits.owner.ConfigFactory;
 
 import static io.restassured.RestAssured.given;
 
 public class Browserstack {
-    static final MobileConfig CFG = ConfigFactory.create(MobileConfig.class);
+    static final Configure CFG = ConfigFactory.create(Configure.class);
 
     public static String videoUrl(String sessionId) {
         return given()
