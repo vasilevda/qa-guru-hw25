@@ -11,7 +11,7 @@ import org.junit.jupiter.params.provider.ValueSource;
 import tests.TestBase;
 import tests.ui.page.MainPage;
 
-@Tag("WEB")
+@Tag("UI")
 @Epic("UI")
 @Owner("vasilevda")
 public class OzonTest extends TestBase {
