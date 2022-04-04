@@ -3,7 +3,6 @@ package tests.api;
 import helpers.CustomAllureListener;
 import io.qameta.allure.Epic;
 import io.qameta.allure.Owner;
-import io.restassured.response.Response;
 import models.Country;
 import org.hamcrest.Matchers;
 import org.junit.jupiter.api.Assertions;
