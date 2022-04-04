@@ -50,11 +50,10 @@
 
 ### <a name="Properties">Оформление документа Configure.properties</a>
 ```XML
-https.url=
-https.curl=
-device.name=
-https.browser=
-device.user=
-device.key=
-
+  https.url=
+  https.curl=
+  device.name=
+  https.browser=
+  device.user=
+  device.key=
 ```
