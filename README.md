@@ -2,17 +2,17 @@
 ![](https://cdn1.ozone.ru/s3/cms/53/t73/wc200/logo-logo-ozon-blue-png_2.png)  
 
 
-## :book: Оглавление
+## Оглавление
 [TOC]
 
 
-## :exclamation: Введение
+## Введение
 - Все представленные тесты были выполнены в рамках подвидения итогов прохождения курсов на портале QA GURU;
 - В некоторых тестах **СПЕЦИАЛЬНО** :D были допущены ошибки;
 
 
 
-# :rocket: Технологии и инструменты
+# Технологии и инструменты
 <p  align="center">
   <code><img width="5%" title="IntelliJ IDEA" src="images/IDEA-logo.svg"></code>
   <code><img width="5%" title="Java" src="images/java-logo.svg"></code>
