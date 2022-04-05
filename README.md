@@ -12,9 +12,8 @@
         + [Варинты документа Configure.properties для запуска тестов](#TypeDocumentProperties)
 + [Отчет о результатах тестирования в Allure Report](#AllureReport)
 + [Интеграция с Allure TestOps](#AllureTestOps)
-<!-- + [Интеграция с Jira](#Jira) -->
 + [Результаты выполнения тестов](#Results)
-
+<!-- + [Интеграция с Jira](#Jira) -->
 
 
 ## <a name="Description">Введение</a>
