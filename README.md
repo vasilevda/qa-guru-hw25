@@ -178,6 +178,35 @@ C --> G[Real]
 
 
 # <a name="AllureTestOps">Интеграция с [Allure TestOps](https://allure.autotests.cloud/project/1203/)</a>
+### Основной дашборд
+
+<p align="center">
+  <img src="images/allureTestOPS dashboards.png" alt="dashboards" width="650">
+</p>
+
+### Дашборд по разным типам тестов
+
+<p align="center">
+  <img src="images/allureTestOPS dashboards test types.png" alt="dashboards test types" width="650">
+</p>
+
+### Запуски
+
+<p align="center">
+  <img src="images/allureTestOPS launches.png" alt="launches" width="650">
+</p>
+
+### Результат запуска
+
+<p align="center">
+  <img src="images/allureTestOPS launch.png" alt="launch" width="650">
+</p>
+
+### Тест-кейсы
+
+<p align="center">
+  <img src="images/Test cases.png" alt="test cases" width="650">
+</p>
 
 
 
@@ -189,10 +218,11 @@ C --> G[Real]
 
 ### Пример запуска теста в Selenoid
 <p align="center">
-  <img src="images/video.gif" alt="video" width="650">
+  <img src="images/video.gif" alt="video" width="450" high="250">
+   <img src="images/video.gif" alt="video" width="450" high="250">
 </p>
 
 ### Уведомления в Telegram
 <p align="center">
-  <a href="http://www.pidor.com/"><img src="images/tlgrm.png" alt="Telegram" width="650"></a>
+  <a href="http://www.pidor.com/"><img src="images/tlgrm.png" alt="Telegram" width="550"></a>
 </p>
