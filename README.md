@@ -178,34 +178,35 @@ C --> G[Real]
 
 
 # <a name="AllureTestOps">Интеграция с [Allure TestOps](https://allure.autotests.cloud/project/1203/)</a>
-### Основной дашборд
 
+### Основной дашборд
 <p align="center">
   <img src="images/allureTestOPS dashboards.png" alt="dashboards" width="650">
 </p>
 
 ### Дашборд по разным типам тестов
-
 <p align="center">
   <img src="images/allureTestOPS dashboards test types.png" alt="dashboards test types" width="650">
 </p>
 
 ### Запуски
-
 <p align="center">
   <img src="images/allureTestOPS launches.png" alt="launches" width="650">
 </p>
 
 ### Результат запуска
-
 <p align="center">
   <img src="images/allureTestOPS launch.png" alt="launch" width="650">
 </p>
 
 ### Тест-кейсы
-
 <p align="center">
   <img src="images/Test cases.png" alt="test cases" width="650">
+</p>
+
+### Дефекты
+<p align="center">
+  <img src="images/testOps_defect.png" alt="defects" width="650">
 </p>
 
 
