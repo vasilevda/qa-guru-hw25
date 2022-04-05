@@ -219,8 +219,9 @@ C --> G[Real]
 
 ### Пример запуска теста в Selenoid
 <p align="center">
-  <img src="images/videoUI.gif" alt="video" width="450" high="250">
-   <img src="images/videoMob.gif" alt="video" width="450" high="250">
+<!--   <img src="images/videoUI.gif" alt="video" width="450" high="250">
+   <img src="images/videoMob.gif" alt="video" width="450" high="250"> -->
+    <video src='images/videoMob.mp4' width=450/>
 </p>
 
 ### Уведомления в Telegram
