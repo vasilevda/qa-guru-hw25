@@ -30,6 +30,7 @@ public class StepsMobile {
     public StepsMobile changeRegionIfExpressPos() {
         skipBanner();
         if ($(AppiumBy.id(EXPRESS_MAIN)).isDisplayed()) {
+            back();
             openProfile();
             clickRegionLocation();
             searchRegionName("Воронеж");
