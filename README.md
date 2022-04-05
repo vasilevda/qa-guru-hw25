@@ -177,7 +177,7 @@ C --> G[Real]
 
 
 
-# <a name="AllureTestOps">Интеграция с [Allure TestOps](https://allure.autotests.cloud/)</a>
+# <a name="AllureTestOps">Интеграция с [Allure TestOps](https://allure.autotests.cloud/project/1203/)</a>
 
 
 
