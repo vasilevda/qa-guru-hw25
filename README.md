@@ -153,7 +153,7 @@ C --> G[Real]
     </details>
 </details>
 
-# <a name="AllureReport">Отчет о результатах тестирования в [Allure Report](https://jenkins.autotests.cloud/job)</a>
+# <a name="AllureReport">Отчет о результатах тестирования в [Allure Report](https://jenkins.autotests.cloud/job/10_da-vasilev_qa-guru-hw25/23/allure/)</a>
 
 #### Общая информация
 Главная страница Allure-отчета содержит следующие информационные блоки:
