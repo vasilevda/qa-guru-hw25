@@ -196,17 +196,17 @@ C --> G[Real]
 
 ### Результат запуска
 <p align="center">
-  <img src="images/allureTestOPS launch.png" alt="launch" width="650">
+  <img src="images/allureTestOPS launch.png" alt="launch" width="750">
 </p>
 
 ### Тест-кейсы
 <p align="center">
-  <img src="images/Test cases.png" alt="test cases" width="650">
+  <img src="images/Test cases.png" alt="test cases" width="750">
 </p>
 
 ### Дефекты
 <p align="center">
-  <img src="images/testOps_defect.png" alt="defects" width="650">
+  <img src="images/testOps_defect.png" alt="defects" width="750">
 </p>
 
 
@@ -219,8 +219,8 @@ C --> G[Real]
 
 ### Пример запуска теста в Selenoid
 <p align="center">
-  <img src="images/video.gif" alt="video" width="450" high="250">
-   <img src="images/video.gif" alt="video" width="450" high="250">
+  <img src="images/videoUI.gif" alt="video" width="450" high="250">
+   <img src="images/videoMob.gif" alt="video" width="450" high="250">
 </p>
 
 ### Уведомления в Telegram
