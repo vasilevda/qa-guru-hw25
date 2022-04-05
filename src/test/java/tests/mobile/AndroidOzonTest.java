@@ -29,6 +29,10 @@ public class AndroidOzonTest extends TestBase {
                 $(AppiumBy.id("ru.ozon.app.android:id/menu_catalog")).click());
 
         step("Проверить наличие строки <Поиск>", () -> {
+            Selenide.sleep(2000);
+            if ($(AppiumBy.accessibilityId("widget common.pageHeader")).isDisplayed())
+                back();
+
             $(AppiumBy.id("ru.ozon.app.android:id/searchTv")).shouldHave(text("Искать на Ozon"));
         });
 
@@ -117,6 +121,10 @@ public class AndroidOzonTest extends TestBase {
                 $(AppiumBy.id("ru.ozon.app.android:id/menu_catalog")).click());
 
         step("Выбрать категорию <" + category + ">", () -> {
+            Selenide.sleep(2000);
+            if ($(AppiumBy.accessibilityId("widget common.pageHeader")).isDisplayed())
+                back();
+
             $(AppiumBy.xpath(String.format("//android.widget.TextView[@text=\"%s\"]", category))).click();
         });
 
