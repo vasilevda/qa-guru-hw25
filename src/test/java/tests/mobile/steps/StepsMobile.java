@@ -33,6 +33,7 @@ public class StepsMobile {
             openProfile();
             clickRegionLocation();
             searchRegionName("Воронеж");
+            selectRegionFromList();
             back();
             openCatalog();
         }
