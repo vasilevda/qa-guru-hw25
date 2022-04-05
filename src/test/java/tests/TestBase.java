@@ -23,7 +23,7 @@ public class TestBase {
 
         switch (CFG.device().toLowerCase()) {
             case "ui":
-                Configuration.browser = UIWebDriver.createDriver();
+                UIWebDriver.createDriver();
                 break;
             case "browserstack":
                 Configuration.browser = BrowserstackMobileDriver.class.getName();
