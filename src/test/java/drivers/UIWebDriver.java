@@ -13,7 +13,7 @@ public class UIWebDriver {
 
     UIWebDriver() {
         Assertions.assertNotNull(CFG.browser());
-//        Assertions.assertNotNull(CFG.curl());
+        Assertions.assertNotNull(CFG.curl());
     }
 
     @Nonnull
