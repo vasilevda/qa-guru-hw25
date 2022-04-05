@@ -28,8 +28,8 @@ public class StepsMobile {
 
     @Step("Сменить регион если каталог -> express")
     public StepsMobile changeRegionIfExpressPos() {
+        skipBanner();
         if ($(AppiumBy.id(EXPRESS_MAIN)).isDisplayed()) {
-            skipBanner();
             openProfile();
             clickRegionLocation();
             searchRegionName("Воронеж");
