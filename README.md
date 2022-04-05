@@ -12,7 +12,7 @@
         + [Варинты документа Configure.properties для запуска тестов](#TypeDocumentProperties)
 + [Отчет о результатах тестирования в Allure Report](#AllureReport)
 + [Интеграция с Allure TestOps](#AllureTestOps)
-+ [Интеграция с Jira](#Jira)
+<!-- + [Интеграция с Jira](#Jira) -->
 + [Результаты выполнения тестов](#Results)
 
 
@@ -211,7 +211,7 @@ C --> G[Real]
 
 
 
-# <a name="Jira">Интеграция с [Jira](https://jira.autotests.cloud/)</a>
+<!-- # <a name="Jira">Интеграция с [Jira](https://jira.autotests.cloud/)</a> -->
 
 
 
@@ -219,7 +219,7 @@ C --> G[Real]
 
 ### Пример запуска теста в Browserstack
 <p align="center">
-  <img src="images/videoMob.gif" alt="video" width="1000">
+  <img src="images/videoMob.gif" alt="video" width="700">
 </p>
 
 ### Пример запуска теста в Selenoid
