@@ -123,14 +123,14 @@ C --> G[Real]
             device.key=bqsfjY6VFvsxvhETqybW
     </details>
 *   <details>
-        <summary><h4>Selenide</h4></summary>
+        <summary><h4>Selenoid</h4></summary>
 
-            https.url=http://hub.browserstack.com/wd/hub
-            https.curl=https://${device.user}:${device.key}@api-cloud.browserstack.com/app-automate/upload
-            device.name=browserstack
+            https.url=http://selenoid:4444/wd/hub
+            https.curl=https://${server.host.login}:${server.host.password}@selenoid.autotests.cloud/wd/hub
+            device.name=Selenoid
             https.browser=
-            device.user=bsuser_CVEMKg
-            device.key=bqsfjY6VFvsxvhETqybW
+            device.user=user1
+            device.key=1234
     </details>
 *   <details>
         <summary><h4>Emulator</h4></summary>
