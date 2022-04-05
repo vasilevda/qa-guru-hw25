@@ -77,7 +77,7 @@ public class StepsMobile {
         return this;
     }
 
-    @Step("Нажать на кнопку <Moй OZON>")
+    @Step("Нажать на кнопку <Профиль>")
     public StepsMobile openProfile() {
         $(AppiumBy.id("ru.ozon.app.android:id/menu_profile")).click();
         return this;
