@@ -16,7 +16,6 @@ public class UIWebDriver {
         Assertions.assertNotNull(CFG.curl());
     }
 
-    @Nonnull
     public static void createDriver() {
         Configuration.browserSize = "1920x1080";
         Configuration.baseUrl = "https://www.ozon.ru/";
