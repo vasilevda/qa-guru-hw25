@@ -60,7 +60,7 @@
 Choice Paramete - позволяет указывать **tag** для запуска тестов API, UI, Mobile. 
  Multi-line String Parameter - необходим для передечи настроек для **Configure.properties** (настройки будут показаны ниже).
 
-## <a name="SystemProperty">Параметры сборки System.property</a>
+## <a name="SystemProperty">Параметры для Choice Parameter</a>
 ```bash
 gradle clean test 
 -Dtag=${tag}
@@ -73,7 +73,7 @@ A --> D[Mobile]
 A --> E[API]
 ```
 
-## <a name="ParamProperties">Параметры сборки properties документа</a>
+## <a name="ParamProperties">Параметры для  Multi-line String Paramete</a>
 Для запуска тестов, нобходимо заполнить документ **Configure.properties** определенными данными, от которых будет зависеть выполнение разных модулей проекта.
 
 ### <a name="Properties">Оформление документа Configure.properties</a>
