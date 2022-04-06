@@ -12,9 +12,8 @@
         + [Варинты документа Configure.properties для запуска тестов](#TypeDocumentProperties)
 + [Отчет о результатах тестирования в Allure Report](#AllureReport)
 + [Интеграция с Allure TestOps](#AllureTestOps)
-+ [Интеграция с Jira](#Jira)
 + [Результаты выполнения тестов](#Results)
-
+<!-- + [Интеграция с Jira](#Jira) -->
 
 
 ## <a name="Description">Введение</a>
@@ -36,8 +35,12 @@
   <code><img width="5%" title="Allure TestOps" src="images/allure-ee-logo.svg"></code>
   <code><img width="5%" title="Github" src="images/git-logo.svg"></code>
   <code><img width="5%" title="Jenkins" src="images/jenkins-logo.svg"></code>
-  <code><img width="5%" title="Jira" src="images/jira-logo.svg"></code>
+<!--   <code><img width="5%" title="Jira" src="images/jira-logo.svg"></code> -->
   <code><img width="5%" title="Telegram" src="images/Telegram.svg"></code>
+  <code><img width="5%" title="Browserstack" src="images/browserstack.svg"></code>
+  <code><img width="5%" title="Android Studio" src="https://upload.wikimedia.org/wikipedia/commons/9/95/Android_Studio_Icon_3.6.svg"></code>
+  <code><img width="5%" title="Appium" src="images/appium.svg"></code>
+    
 </p>
 
 В данном проекте автотесты написаны на **Java** с использованием фреймворка **Selenide**.
@@ -45,11 +48,17 @@
 **JUnit 5** используется как фреймворк для модульного тестирования.
 Запуск тестов выполняется из **Jenkins**.
 **Selenoid** используется для запуска браузеров в контейнерах **Docker**.
+**Browserstack** используется для запусска мобильных тестов, также для локального запуска
+используются инструменты **Android Studio** и **Appium**.
 **Allure Report, Telegram Bot** используются для визуализации результатов тестирования.
 
 
 
 # <a name="Jenkins">Запуск тестов в [Jenkins](https://jenkins.autotests.cloud/job/10_da-vasilev_qa-guru-hw25/)</a>
+
+Для запуска тестов на разных инструментах в Jenkins была создана job (джоба). Для возможности запуска разных видов тестов (API, UI, Mobile), был включен пункт для сбокри **this project is parameterized** и добавлены параметры **Choice Parameter**, **Multi-line String Parameter**.
+Choice Paramete - позволяет указывать **tag** для запуска тестов API, UI, Mobile. 
+ Multi-line String Parameter - необходим для передечи настроек для **Configure.properties** (настройки будут показаны ниже).
 
 ## <a name="SystemProperty">Параметры сборки System.property</a>
 ```bash
@@ -154,7 +163,7 @@ C --> G[Real]
     </details>
 </details>
 
-# <a name="AllureReport">Отчет о результатах тестирования в [Allure Report](https://jenkins.autotests.cloud/job)</a>
+# <a name="AllureReport">Отчет о результатах тестирования в [Allure Report](https://jenkins.autotests.cloud/job/10_da-vasilev_qa-guru-hw25/23/allure/)</a>
 
 #### Общая информация
 Главная страница Allure-отчета содержит следующие информационные блоки:
@@ -211,7 +220,7 @@ C --> G[Real]
 
 
 
-# <a name="Jira">Интеграция с [Jira](https://jira.autotests.cloud/)</a>
+<!-- # <a name="Jira">Интеграция с [Jira](https://jira.autotests.cloud/)</a> -->
 
 
 
@@ -219,7 +228,7 @@ C --> G[Real]
 
 ### Пример запуска теста в Browserstack
 <p align="center">
-  <img src="images/videoMob.gif" alt="video" width="1000">
+  <img src="images/videoMob.gif" alt="video" width="700">
 </p>
 
 ### Пример запуска теста в Selenoid
