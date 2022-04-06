@@ -6,8 +6,8 @@
 + [Введение](#Description)
 + [Технологии и инструменты](#Technology)
 + [Запуск тестов в Jenkins](#Jenkins)
-    + [Параметры сборки System.property](#SystemProperty)
-    + [Параметры сборки properties документа](#ParamProperties)
+    + [Параметры для Choice Parameter](#SystemProperty)
+    + [Параметры для Multi-line String Parameter](#ParamProperties)
         + [Оформление документа Configure.properties](#Properties)
         + [Варинты документа Configure.properties для запуска тестов](#TypeDocumentProperties)
 + [Отчет о результатах тестирования в Allure Report](#AllureReport)
@@ -73,7 +73,7 @@ A --> D[Mobile]
 A --> E[API]
 ```
 
-## <a name="ParamProperties">Параметры для  Multi-line String Paramete</a>
+## <a name="ParamProperties">Параметры для Multi-line String Paramete</a>
 Для запуска тестов, нобходимо заполнить документ **Configure.properties** определенными данными, от которых будет зависеть выполнение разных модулей проекта.
 
 ### <a name="Properties">Оформление документа Configure.properties</a>
