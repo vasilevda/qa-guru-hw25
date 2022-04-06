@@ -35,8 +35,12 @@
   <code><img width="5%" title="Allure TestOps" src="images/allure-ee-logo.svg"></code>
   <code><img width="5%" title="Github" src="images/git-logo.svg"></code>
   <code><img width="5%" title="Jenkins" src="images/jenkins-logo.svg"></code>
-  <code><img width="5%" title="Jira" src="images/jira-logo.svg"></code>
+<!--   <code><img width="5%" title="Jira" src="images/jira-logo.svg"></code> -->
   <code><img width="5%" title="Telegram" src="images/Telegram.svg"></code>
+  <code><img width="5%" title="Browserstack" src="images/browserstack.svg"></code>
+  <code><img width="5%" title="Android Studio" src=" https://upload.wikimedia.org/wikipedia/commons/9/95/Android_Studio_Icon_3.6.svg"></code>
+  <code><img width="5%" title="Appium" src="images/appium.svg"></code>
+    
 </p>
 
 В данном проекте автотесты написаны на **Java** с использованием фреймворка **Selenide**.
