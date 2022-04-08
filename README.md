@@ -59,8 +59,12 @@
 Для запуска тестов на разных инструментах в Jenkins была создана job (джоба). Для возможности запуска разных видов тестов (API, UI, Mobile), был включен пункт для сбокри **this project is parameterized** и добавлены параметры **Choice Parameter**, **Multi-line String Parameter**.
 Choice Paramete - позволяет указывать **tag** для запуска тестов API, UI, Mobile. 
  Multi-line String Parameter - необходим для передечи настроек для **Configure.properties** (настройки будут показаны ниже).
+ 
+ Для запуска небходимо заполнить поля показанные на скришоте ниже.
+  <img src="images/Run test.png" alt="Allure Report" width="650">
 
-## <a name="SystemProperty">Параметры для Choice Parameter</a>
+
+## <a name="SystemProperty">Параметры  сборки</a>
 ```bash
 gradle clean test 
 -Dtag=${tag}
@@ -73,7 +77,7 @@ A --> D[Mobile]
 A --> E[API]
 ```
 
-## <a name="ParamProperties">Параметры для Multi-line String Paramete</a>
+## <a name="ParamProperties">Параметры для Configure.properties</a>
 Для запуска тестов, нобходимо заполнить документ **Configure.properties** определенными данными, от которых будет зависеть выполнение разных модулей проекта.
 
 ### <a name="Properties">Оформление документа Configure.properties</a>
