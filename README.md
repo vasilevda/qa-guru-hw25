@@ -61,7 +61,9 @@ Choice Paramete - позволяет указывать **tag** для запу�
  Multi-line String Parameter - необходим для передечи настроек для **Configure.properties** (настройки будут показаны ниже).
  
  Для запуска небходимо заполнить поля показанные на скришоте ниже.
-  <img src="images/Run test.png" alt="Allure Report" width="650">
+    <p  align="center">
+      <img src="images/Run test.png" alt="Allure Report" width="850">
+     </p>
 
 
 ## <a name="SystemProperty">Параметры  сборки</a>
@@ -87,7 +89,7 @@ A --> E[API]
   https.url=
   https.curl=
   device.name=
-  https.browser=
+  device.browser=
   device.user=
   device.key=
 ```
