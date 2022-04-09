@@ -32,7 +32,7 @@ public class BrowserstackMobileDriver implements WebDriverProvider {
 
     BrowserstackMobileDriver() {
         Assertions.assertNotNull(CFG.url(), "Url not found");
-        Assertions.assertNotNull(CFG.curl(), "Curl not found");
+        Assertions.assertNotNull(CFG.remoteDriver(), "Remote driver not found");
         Assertions.assertNotNull(CFG.user(), "User not found");
         Assertions.assertNotNull(CFG.key(), "Key not found");
     }
@@ -42,7 +42,7 @@ public class BrowserstackMobileDriver implements WebDriverProvider {
       return given()
                 .multiPart("file", new File("src/test/resources/apk/ru.ozon.app.android.apk"))
                 .when()
-                .post(CFG.curl())
+                .post(CFG.remoteDriver())
                 .then()
                 .statusCode(200)
                 .body("app_url", is(notNullValue()))

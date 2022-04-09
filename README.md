@@ -86,20 +86,20 @@ A --> E[API]
 
 Структура файла .properties:
 ```
-  https.url=
-  https.curl=
-  device.name=
-  device.browser=
-  device.user=
-  device.key=
+    url=
+    remoteDriver=
+    tools=
+    browser=
+    user=
+    key=
 ```
 Примечание к Configure.properties:
->- *https.url* - унифицированный указатель ресурса
->- *https.curl* - служебная программа командной строки, позволяющая взаимодействовать с множеством различных серверов по множеству различных протоколов
->- *device.name* - имя ресурса\девайса\инструмента являющееся важным ключём позволяющее запускать определенные тесты
->- *device.browser* - браузер, в котором будут выполняться тесты (по умолчанию chrome)
->- *device.user* - логин для авторизации
->- *device.key* - ключ\пароль для авторизации
+>- *url* - унифицированный указатель ресурса
+>- *curl* - служебная программа командной строки, позволяющая взаимодействовать с множеством различных серверов по множеству различных протоколов
+>- *tools* - имя ресурса\девайса\инструмента являющееся важным ключём позволяющее запускать определенные тесты
+>- *browser* - браузер, в котором будут выполняться тесты (по умолчанию chrome)
+>- *user* - логин для авторизации
+>- *key* - ключ\пароль для авторизации
 
 ### <a name="TypeDocumentProperties">Варинты документа Configure.properties для запуска тестов</a>
 
@@ -116,12 +116,12 @@ C --> G[Real]
 <details>
     <summary><h4>Configure.properties для UI</h4></summary>
     
-        https.url=http://selenoid:4444/wd/hub
-        https.curl=https://${server.host.login}:${server.host.password}@selenoid.autotests.cloud/wd/hub
-        device.name=UI
-        https.browser=
-        device.user=user1
-        device.key=user1
+        url=http://selenoid:4444/wd/hub
+        curl=https://${server.host.login}:${server.host.password}@selenoid.autotests.cloud/wd/hub
+        tools=UI
+        browser=
+        user=user1
+        key=user1
    
 </details>
 <details>
@@ -130,42 +130,42 @@ C --> G[Real]
 *   <details>
         <summary><h4>Browserstack</h4></summary>
 
-            https.url=http://hub.browserstack.com/wd/hub
-            https.curl=https://${device.user}:${device.key}@api-cloud.browserstack.com/app-automate/upload
-            device.name=browserstack
-            https.browser=
-            device.user=bsuser_CVEMKg
-            device.key=bqsfjY6VFvsxvhETqybW
+            url=http://hub.browserstack.com/wd/hub
+            curl=https://${user}:${key}@api-cloud.browserstack.com/app-automate/upload
+            tools=browserstack
+            browser=
+            user=bsuser_CVEMKg
+            key=bqsfjY6VFvsxvhETqybW
     </details>
 *   <details>
         <summary><h4>Selenoid</h4></summary>
 
-            https.url=http://selenoid:4444/wd/hub
-            https.curl=https://${server.host.login}:${server.host.password}@selenoid.autotests.cloud/wd/hub
-            device.name=Selenoid
-            https.browser=
-            device.user=user1
-            device.key=1234
+            url=http://selenoid:4444/wd/hub
+            curl=https://${server.host.login}:${server.host.password}@selenoid.autotests.cloud/wd/hub
+            tools=Selenoid
+            browser=
+            user=user1
+            key=1234
     </details>
 *   <details>
         <summary><h4>Emulator</h4></summary>
 
-            https.url=http://localhost:4723/wd/hub
-            https.curl=
-            device.name=Emulation
-            https.browser=
-            device.user=
-            device.key=
+            url=http://localhost:4723/wd/hub
+            curl=
+            tools=Emulation
+            browser=
+            user=
+            key=
     </details>
 *   <details>
         <summary><h4>Real</h4></summary>
 
-            https.url=http://localhost:4723/wd/hub
-            https.curl=
-            device.name=Real
-            https.browser=
-            device.user=
-            device.key=
+            url=http://localhost:4723/wd/hub
+            curl=
+            tools=Real
+            browser=
+            user=
+            key=
     </details>
 </details>
 

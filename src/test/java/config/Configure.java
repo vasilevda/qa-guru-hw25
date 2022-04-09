@@ -4,23 +4,23 @@ import org.aeonbits.owner.Config;
 
 import static org.aeonbits.owner.Config.*;
 
-@Sources("classpath:config/Configure.properties")
+@Sources("classpath:config/configure.properties")
 public interface Configure extends Config {
-    @Key("https.url")
+    @Key("url")
     String url();
 
-    @Key("https.curl")
-    String curl();
+    @Key("remoteDriver")
+    String remoteDriver();
 
-    @Key("device.browser")
+    @Key("browser")
     String browser();
 
-    @Key("device.name")
-    String device();
+    @Key("tools")
+    String tools();
 
-    @Key("device.user")
+    @Key("user")
     String user();
 
-    @Key("device.key")
+    @Key("key")
     String key();
 }

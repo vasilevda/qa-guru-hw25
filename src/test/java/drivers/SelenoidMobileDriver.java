@@ -19,7 +19,7 @@ public class SelenoidMobileDriver implements WebDriverProvider {
     static final Configure CFG = ConfigFactory.create(Configure.class);
 
     SelenoidMobileDriver () {
-        Assertions.assertNotNull(CFG.curl(), "Сurl not fount");
+        Assertions.assertNotNull(CFG.remoteDriver(), "Сurl not fount");
     }
 
     @Override
@@ -41,7 +41,7 @@ public class SelenoidMobileDriver implements WebDriverProvider {
         options.setAppActivity("org.wikipedia.main.MainActivity");
 
         try {
-            return new AndroidDriver(new URL(CFG.curl()), options);
+            return new AndroidDriver(new URL(CFG.remoteDriver()), options);
         } catch (MalformedURLException e) {
             throw new RuntimeException(e);
         }

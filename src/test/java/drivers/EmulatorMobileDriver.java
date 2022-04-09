@@ -24,7 +24,7 @@ public class EmulatorMobileDriver implements WebDriverProvider {
     static final Configure CFG = ConfigFactory.create(Configure.class);
 
     EmulatorMobileDriver() {
-        Assertions.assertNotNull(CFG.url(), "Hub not fount");
+        Assertions.assertNotNull(CFG.url(), "Url not fount");
     }
 
     @Override
