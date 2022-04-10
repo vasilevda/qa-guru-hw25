@@ -4,8 +4,11 @@ import com.codeborne.selenide.Configuration;
 import config.Configure;
 import org.aeonbits.owner.ConfigFactory;
 import org.junit.jupiter.api.Assertions;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
+
+import static com.codeborne.selenide.WebDriverRunner.setWebDriver;
 
 public class UIWebDriver {
     static final Configure CFG = ConfigFactory.create(Configure.class);
@@ -33,5 +36,6 @@ public class UIWebDriver {
         capabilities.setCapability("enableVideo", true);
         capabilities.setCapability(ChromeOptions.CAPABILITY, OPTIONS);
         Configuration.browserCapabilities = capabilities;
+        setWebDriver(new ChromeDriver(OPTIONS));
     }
 }
