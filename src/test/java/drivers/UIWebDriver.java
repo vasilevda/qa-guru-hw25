@@ -19,7 +19,7 @@ public class UIWebDriver {
         OPTIONS.addArguments("--disable-infobars");
         OPTIONS.addArguments("--disable-popup-blocking");
         OPTIONS.addArguments("--disable-notifications");
-        OPTIONS.addArguments("--lang=en-en");
+        OPTIONS.addArguments("--lang=ru-ru");
     }
 
     public static void createDriver() {
