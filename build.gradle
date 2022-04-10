@@ -53,10 +53,9 @@ tasks.withType(JavaCompile) {
 
 tasks.withType(Test) {
     systemProperties(System.getProperties())
-//    useJUnitPlatform {
-//        includeTags System.getProperty("tag").toString()
-//    }
-    useJUnitPlatform()
+    useJUnitPlatform {
+        includeTags System.getProperty("tag").toString()
+    }
 
     testLogging {
         lifecycle {
