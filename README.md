@@ -86,17 +86,18 @@ A --> E[API]
 
 Структура файла .properties:
 ```
-    url=
+    hub=
     remoteDriver=
-    tools=
+    tool=
     browser=
     user=
     key=
+
 ```
 Примечание к Configure.properties:
->- *url* - унифицированный указатель ресурса
->- *curl* - служебная программа командной строки, позволяющая взаимодействовать с множеством различных серверов по множеству различных протоколов
->- *tools* - имя ресурса\девайса\инструмента являющееся важным ключём позволяющее запускать определенные тесты
+>- *hub* - унифицированный указатель ресурса
+>- *remoteDriver* - служебная программа командной строки, позволяющая взаимодействовать с множеством различных серверов по множеству различных протоколов
+>- *tool* - имя ресурса\девайса\инструмента являющееся важным ключём позволяющее запускать определенные тесты
 >- *browser* - браузер, в котором будут выполняться тесты (по умолчанию chrome)
 >- *user* - логин для авторизации
 >- *key* - ключ\пароль для авторизации
@@ -116,9 +117,9 @@ C --> G[Real]
 <details>
     <summary><h4>Configure.properties для UI</h4></summary>
     
-        url=http://selenoid:4444/wd/hub
-        curl=https://${server.host.login}:${server.host.password}@selenoid.autotests.cloud/wd/hub
-        tools=UI
+        hub=http://selenoid:4444/wd/hub
+        remoteDriver=https://${server.host.login}:${server.host.password}@selenoid.autotests.cloud/wd/hub
+        tool=UI
         browser=
         user=user1
         key=user1
@@ -130,9 +131,9 @@ C --> G[Real]
 *   <details>
         <summary><h4>Browserstack</h4></summary>
 
-            url=http://hub.browserstack.com/wd/hub
-            curl=https://${user}:${key}@api-cloud.browserstack.com/app-automate/upload
-            tools=browserstack
+            hub=http://hub.browserstack.com/wd/hub
+            remoteDriver=https://${user}:${key}@api-cloud.browserstack.com/app-automate/upload
+            tool=browserstack
             browser=
             user=bsuser_CVEMKg
             key=bqsfjY6VFvsxvhETqybW
@@ -140,9 +141,9 @@ C --> G[Real]
 *   <details>
         <summary><h4>Selenoid</h4></summary>
 
-            url=http://selenoid:4444/wd/hub
-            curl=https://${server.host.login}:${server.host.password}@selenoid.autotests.cloud/wd/hub
-            tools=Selenoid
+            hub=http://selenoid:4444/wd/hub
+            remoteDriver=https://${server.host.login}:${server.host.password}@selenoid.autotests.cloud/wd/hub
+            tool=Selenoid
             browser=
             user=user1
             key=1234
@@ -150,9 +151,9 @@ C --> G[Real]
 *   <details>
         <summary><h4>Emulator</h4></summary>
 
-            url=http://localhost:4723/wd/hub
-            curl=
-            tools=Emulation
+            hub=http://localhost:4723/wd/hub
+            remoteDriver=
+            tool=Emulation
             browser=
             user=
             key=
@@ -160,9 +161,9 @@ C --> G[Real]
 *   <details>
         <summary><h4>Real</h4></summary>
 
-            url=http://localhost:4723/wd/hub
-            curl=
-            tools=Real
+            hub=http://localhost:4723/wd/hub
+            remoteDriver=
+            tool=Real
             browser=
             user=
             key=

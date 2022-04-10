@@ -6,8 +6,8 @@ import static org.aeonbits.owner.Config.*;
 
 @Sources("classpath:config/configure.properties")
 public interface Configure extends Config {
-    @Key("url")
-    String url();
+    @Key("hub")
+    String hub();
 
     @Key("remoteDriver")
     String remoteDriver();
@@ -15,8 +15,8 @@ public interface Configure extends Config {
     @Key("browser")
     String browser();
 
-    @Key("tools")
-    String tools();
+    @Key("tool")
+    String tool();
 
     @Key("user")
     String user();

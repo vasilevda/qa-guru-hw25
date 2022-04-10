@@ -21,7 +21,7 @@ public class OzonTest extends TestBase {
     @DisplayName("Тестирование поиска")
     void searchTest() {
         mainPage
-                .openPage("")
+                .openPage()
                 .search("PS4 Игры")
                 .checkResultsHeader("PS4 Игры");
     }
@@ -30,7 +30,7 @@ public class OzonTest extends TestBase {
     @ParameterizedTest(name = "Тестирование смены региона <{0}>")
     void changeRegionTest(String region) {
         mainPage
-                .openPage("")
+                .openPage()
                 .selectRegion(region)
                 .refreshPage()
                 .checkRegion(region);
@@ -40,7 +40,7 @@ public class OzonTest extends TestBase {
     @ParameterizedTest(name = "Проверяем горизантальное меню <{0}>")
     void checkCategoryMenuTest(String category) {
         mainPage
-                .openPage("")
+                .openPage()
                 .selectHeaderMenu(category)
                 .checkTitleCategoryMenu(category);
     }
@@ -51,7 +51,7 @@ public class OzonTest extends TestBase {
             "Автотовары, Аккумуляторы, Аккумуляторы и аксессуары"})
     @ParameterizedTest(name = "Тестирование выбора категорий <{0} - {1}>")
     void selectCategoryAppTest(String category, String subcategory, String title) {
-        mainPage
+        mainPage.categoryPage
                 .openPage("category/")
                 .selectCategory(category)
                 .checkCategory(category)

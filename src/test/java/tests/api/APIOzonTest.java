@@ -12,6 +12,11 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+
 import static io.qameta.allure.Allure.step;
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.is;
@@ -22,12 +27,10 @@ import static org.hamcrest.Matchers.is;
 public class APIOzonTest {
 
     private Country country = null;
-
-    private final String COOKIE = "__Secure-access-token=3.0.GwQLN0RwQBOBbKf8b2_mFA.0.l8cMBQAAAABiR2sDF0CGFaN3ZWKgAICQoA..20220402011411.gbIggu-12joKnxg3ZzDv75OiwnQJF6Qm53oSW2nGB-M; " +
-            "__Secure-refresh-token=3.0.GwQLN0RwQBOBbKf8b2_mFA.0.l8cMBQAAAABiR2sDF0CGFaN3ZWKgAICQoA..20220402011411._WTuOV6h6CbQ19iR1YUNJ_MIpRS5RuTYFzrH2Ldl4BQ;";
+    String cookie;
 
     @Test
-    @DisplayName("Добавления товара в корзину")
+    @DisplayName("Добавление товара в корзину")
     void testAddToCart() {
         step("Добавить товар в корзину", () -> {
             given()
@@ -45,12 +48,15 @@ public class APIOzonTest {
     }
 
     @Test
-    @DisplayName("Добавления товара в корзину выше доступного лимита")
-    void testNegativeAddToCart() {
+    @DisplayName("Добавление товара в корзину выше доступного лимита")
+    void testNegativeAddToCart() throws IOException {
+        cookie = new BufferedReader(new FileReader("src/test/resources/api/cookie.text")).readLine();
+
         step("Добавить товар в корзину", () -> {
+
             given()
                     .filter(CustomAllureListener.withCustomTemplates())
-                    .cookie(COOKIE)
+                    .cookie(cookie)
                     .contentType("application/json; charset=UTF-8")
                     .body("[{\"id\":146265158,\"quantity\":100500900}]")
                     .when()
@@ -64,7 +70,7 @@ public class APIOzonTest {
         step("Проверить товар в корзине", () -> {
             given()
                     .filter(CustomAllureListener.withCustomTemplates())
-                    .cookie(COOKIE)
+                    .cookie(cookie)
                     .contentType("application/json; charset=UTF-8")
                     .when()
                     .get("https://www.ozon.ru/api/composer-api.bx/_action/summary")

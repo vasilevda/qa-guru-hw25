@@ -22,7 +22,7 @@ public class MobileDriver implements WebDriverProvider {
     static final Configure CFG = ConfigFactory.create(Configure.class);
 
     MobileDriver () {
-        Assertions.assertNotNull(CFG.url(), "Hub not fount");
+        Assertions.assertNotNull(CFG.hub(), "Hub not fount");
     }
 
     @Override
@@ -43,7 +43,7 @@ public class MobileDriver implements WebDriverProvider {
         options.setAppActivity("org.wikipedia.main.MainActivity");
 
         try {
-            return new AndroidDriver(new URL(CFG.url()), options);
+            return new AndroidDriver(new URL(CFG.hub()), options);
         } catch (MalformedURLException e) {
             throw new RuntimeException(e);
         }

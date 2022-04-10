@@ -24,7 +24,7 @@ public class EmulatorMobileDriver implements WebDriverProvider {
     static final Configure CFG = ConfigFactory.create(Configure.class);
 
     EmulatorMobileDriver() {
-        Assertions.assertNotNull(CFG.url(), "Url not fount");
+        Assertions.assertNotNull(CFG.hub(), "Url not fount");
     }
 
     @Override
@@ -46,7 +46,7 @@ public class EmulatorMobileDriver implements WebDriverProvider {
         options.setAppActivity("ru.ozon.app.android.ui.start.PreStartActivity");
 
         try {
-            return new AndroidDriver(new URL(CFG.url()), options);
+            return new AndroidDriver(new URL(CFG.hub()), options);
         } catch (MalformedURLException e) {
             throw new RuntimeException(e);
         }

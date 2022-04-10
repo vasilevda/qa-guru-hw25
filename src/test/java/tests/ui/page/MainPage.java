@@ -9,18 +9,18 @@ import org.openqa.selenium.By;
 import static com.codeborne.selenide.Selenide.*;
 
 public class MainPage {
+    public CategoryPage categoryPage = new CategoryPage();
+
 
     private final SelenideElement
             TOP_BAR = $("[data-widget='topBar'] button"),
             SEARCH = $("[placeholder='Искать на Ozon']"),
             RESULTS_HEADER = $("[data-widget=fulltextResultsHeader]"),
             HORIZONTAL_MENU = $("[data-widget=horizontalMenu]");
-    private final ElementsCollection
-            OBJECT_LINE = $$("[data-widget='objectLine']");
 
     @Step("Открыть страницу <{url}>")
-    public MainPage openPage(String url) {
-        open(url);
+    public MainPage openPage() {
+        open("");
         return this;
     }
 
@@ -75,23 +75,6 @@ public class MainPage {
         $(TOP_BAR)
                 .$(".ui-f0")
                 .shouldHave(Condition.text(region));
-        return this;
-    }
-
-    @Step("Выбрать категорию <{0}>")
-    public MainPage selectCategory(String category) {
-        $$(OBJECT_LINE)
-                .findBy(Condition.text(category))
-                .$$(".tsBodyL")
-                .findBy(Condition.text(category)).shouldHave(Condition.text(category))
-                .click();
-        return this;
-    }
-
-    @Step("Проверить категорию <{0}>")
-    public MainPage checkCategory(String category) {
-        $("[data-widget=catalogResultsHeader], [data-widget='caption']")
-                .shouldBe(Condition.text(category));
         return this;
     }
 }

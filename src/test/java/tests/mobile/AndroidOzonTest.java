@@ -31,7 +31,7 @@ public class AndroidOzonTest extends TestBase {
     }
 
     @Test
-    @DisplayName("Добавления товара в корзину")
+    @DisplayName("Добавление товара в корзину")
     void addToCartAppTest() {
         stepsMobile
                 .changeRegionIfExpressPos()

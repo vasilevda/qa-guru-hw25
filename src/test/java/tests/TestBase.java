@@ -21,7 +21,7 @@ public class TestBase {
     public static void setup() {
         addListener("AllureSelenide", new AllureSelenide());
 
-        switch (CFG.tools().toLowerCase()) {
+        switch (CFG.tool().toLowerCase()) {
             case "ui":
                 UIWebDriver.createDriver();
                 break;
@@ -40,7 +40,7 @@ public class TestBase {
             default:
                 throw new IllegalArgumentException(
                         String.format("Unknown device name=%s. " +
-                                "-Ddevice.name=[Browserstack/Selenoid/Emulation/Real/UI]", CFG.tools()));
+                                "-Ddevice.name=[Browserstack/Selenoid/Emulation/Real/UI]", CFG.tool()));
         }
         Configuration.browserSize = null;
     }
@@ -56,7 +56,7 @@ public class TestBase {
         screenshotAs("Last screenshot");
         pageSource();
 
-        switch (CFG.tools().toLowerCase()) {
+        switch (CFG.tool().toLowerCase()) {
             case "browserstack":
                 videoBrowserstack(sessionId);
                 break;

@@ -24,14 +24,14 @@ public class BrowserstackMobileDriver implements WebDriverProvider {
 
     public static URL getBrowserstackUrl() {
         try {
-            return new URL(CFG.url());
+            return new URL(CFG.hub());
         } catch (MalformedURLException e) {
             throw new RuntimeException(e);
         }
     }
 
     BrowserstackMobileDriver() {
-        Assertions.assertNotNull(CFG.url(), "Url not found");
+        Assertions.assertNotNull(CFG.hub(), "Url not found");
         Assertions.assertNotNull(CFG.remoteDriver(), "Remote driver not found");
         Assertions.assertNotNull(CFG.user(), "User not found");
         Assertions.assertNotNull(CFG.key(), "Key not found");
