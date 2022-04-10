@@ -4,14 +4,22 @@ import com.codeborne.selenide.Configuration;
 import config.Configure;
 import org.aeonbits.owner.ConfigFactory;
 import org.junit.jupiter.api.Assertions;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
 public class UIWebDriver {
     static final Configure CFG = ConfigFactory.create(Configure.class);
+    private static final ChromeOptions OPTIONS = new ChromeOptions();
 
     UIWebDriver() {
         Assertions.assertNotNull(CFG.browser());
         Assertions.assertNotNull(CFG.remoteDriver());
+
+        OPTIONS.addArguments("--no-sandbox");
+        OPTIONS.addArguments("--disable-infobars");
+        OPTIONS.addArguments("--disable-popup-blocking");
+        OPTIONS.addArguments("--disable-notifications");
+        OPTIONS.addArguments("--lang=en-en");
     }
 
     public static void createDriver() {
@@ -23,6 +31,7 @@ public class UIWebDriver {
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("enableVNC", true);
         capabilities.setCapability("enableVideo", true);
+        capabilities.setCapability(ChromeOptions.CAPABILITY, OPTIONS);
         Configuration.browserCapabilities = capabilities;
     }
 }
